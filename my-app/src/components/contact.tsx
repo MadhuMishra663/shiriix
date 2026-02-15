@@ -63,8 +63,14 @@ const Contact = () => {
       )}
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="py-24 text-center px-6">
-        <h2 className="text-4xl font-bold mb-10 text-purple-400">Contact</h2>
+      <section
+        id="contact"
+        className="py-24 text-center px-6 animate-pastelMove bg-[length:200%_200%]"
+        style={{
+          backgroundImage: "linear-gradient(270deg, #fbcfe8, #bfdbfe, #e9d5ff)",
+        }}
+      >
+        <h2 className="text-4xl font-bold mb-10 text-gray-900">Contact</h2>
 
         <form
           ref={form}
@@ -83,7 +89,7 @@ const Contact = () => {
             name="name"
             placeholder="Your Name"
             required
-            className="p-4 rounded-lg bg-gray-800 focus:ring-2 focus:ring-purple-600 outline-none"
+            className="p-4 rounded-lg bg-white/70 backdrop-blur-sm text-gray-900 focus:ring-2 focus:ring-gray-400 outline-none"
           />
 
           <input
@@ -91,7 +97,7 @@ const Contact = () => {
             name="email"
             placeholder="Your Email"
             required
-            className="p-4 rounded-lg bg-gray-800 focus:ring-2 focus:ring-purple-600 outline-none"
+            className="p-4 rounded-lg bg-white/70 backdrop-blur-sm text-gray-900 focus:ring-2 focus:ring-gray-400 outline-none"
           />
 
           <textarea
@@ -99,13 +105,13 @@ const Contact = () => {
             placeholder="Your Message"
             required
             rows={5}
-            className="p-4 rounded-lg bg-gray-800 focus:ring-2 focus:ring-purple-600 outline-none"
+            className="p-4 rounded-lg bg-white/70 backdrop-blur-sm text-gray-900 focus:ring-2 focus:ring-gray-400 outline-none"
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition shadow-lg disabled:opacity-50"
+            className="py-3 bg-gray-900/70 hover:bg-gray-900/80 text-white rounded-lg transition shadow-lg disabled:opacity-50"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>

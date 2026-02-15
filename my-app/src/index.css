@@ -85,7 +85,7 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-/* Full page setup */
+/* Full page setup with animated pastel background */
 html,
 body,
 #root {
@@ -95,14 +95,68 @@ body,
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 
-  /* Animated pastel gradient for the whole site */
+  /* Animated pastel gradient */
   @apply animate-pastelMove;
   background: linear-gradient(270deg, #fbcfe8, #bfdbfe, #e9d5ff);
   background-size: 200% 200%;
-  color: white; /* Default text color for all sections */
+  color: #1f2937; /* dark text for readability */
 }
 
-/* Optional: for consistency in sections */
+/* Sections inherit the animated background */
 section {
-  background: transparent; /* Ensure no section overrides the global bg */
+  background: transparent;
+  color: #1f2937; /* enforce dark text */
+}
+
+/* Optional: smooth scrolling for anchors */
+a {
+  color: #1f2937;
+  text-decoration: underline;
+}
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blinkCaret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
+}
+
+.typewriter-loop {
+  display: inline-block;
+  overflow: hidden; /* hide the text that hasn't appeared yet */
+  white-space: nowrap; /* keep it in one line */
+  border-right: 2px solid; /* caret */
+  animation:
+    typewriter 3s steps(25) infinite,
+    blinkCaret 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    border-color: transparent;
+  }
+  25%,
+  75% {
+    border-color: currentColor;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
 }

@@ -9,14 +9,12 @@ const Navbar = () => {
 
   const handleScroll = (id: string) => {
     setMenuOpen(false);
-
     if (location.pathname !== "/") {
-      navigate("/"); // Navigate to home page first
-      // Wait for navigation & DOM to render
+      navigate("/");
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 200); // Slightly longer delay
+      }, 200);
     } else {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -25,7 +23,6 @@ const Navbar = () => {
 
   const handleLogoClick = () => {
     setMenuOpen(false);
-
     if (location.pathname !== "/") {
       navigate("/", { state: { scrollToHero: true } });
     } else {
@@ -34,40 +31,43 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed w-full z-50 bg-white/20 backdrop-blur-lg border-b border-white/20">
       <div className="flex justify-between items-center px-6 md:px-10 py-4">
         {/* Logo */}
         <div
           onClick={handleLogoClick}
           className="flex items-center gap-3 cursor-pointer"
         >
-          <img
-            src={logo}
-            alt="Shiriix Logo"
-            className="h-10 w-auto object-contain"
-          />
-          <span className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            Shiriix
-          </span>
+          {/* Round Logo */}
+          <div className="h-10 w-10 rounded-full overflow-hidden bg-white/50 flex items-center justify-center shadow-md">
+            <img
+              src={logo}
+              alt="Shiriix Logo"
+              className="h-full w-full object-cover rounded-full"
+            />
+          </div>
+
+          {/* Company Name in dark color */}
+          <span className="text-xl font-semibold text-gray-900">Shiriix</span>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-white">
+        <div className="hidden md:flex space-x-8 text-gray-900 font-medium">
           <button
             onClick={() => handleScroll("about")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-gray-700 transition"
           >
             About
           </button>
           <button
             onClick={() => handleScroll("services")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-gray-700 transition"
           >
             Services
           </button>
           <button
             onClick={() => handleScroll("contact")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-gray-700 transition"
           >
             Contact
           </button>
@@ -80,13 +80,13 @@ const Navbar = () => {
             className="flex flex-col gap-1"
           >
             <span
-              className={`w-6 h-0.5 bg-white transition ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`}
+              className={`w-6 h-0.5 bg-gray-900 transition ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`}
             />
             <span
-              className={`w-6 h-0.5 bg-white transition ${menuOpen ? "opacity-0" : ""}`}
+              className={`w-6 h-0.5 bg-gray-900 transition ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
-              className={`w-6 h-0.5 bg-white transition ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}
+              className={`w-6 h-0.5 bg-gray-900 transition ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}
             />
           </button>
         </div>
@@ -94,22 +94,22 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden flex flex-col items-center bg-black/90 backdrop-blur-md py-6 space-y-6 text-white animate-slideDown">
+        <div className="md:hidden flex flex-col items-center bg-white/20 backdrop-blur-lg py-6 space-y-6 text-gray-900 animate-slideDown rounded-b-xl shadow-lg">
           <button
             onClick={() => handleScroll("about")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-gray-700 transition"
           >
             About
           </button>
           <button
             onClick={() => handleScroll("services")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-gray-700 transition"
           >
             Services
           </button>
           <button
             onClick={() => handleScroll("contact")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-gray-700 transition"
           >
             Contact
           </button>

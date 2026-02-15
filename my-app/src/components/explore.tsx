@@ -1,11 +1,34 @@
 const Explore = () => {
+  const features = [
+    {
+      title: "Scalability",
+      description:
+        "Our platform grows with your business, handling large volumes of data and expanding operations without compromising performance.",
+    },
+    {
+      title: "Security",
+      description:
+        "Advanced encryption, role-based access, and continuous monitoring ensure your data remains protected and regulatory-compliant.",
+    },
+    {
+      title: "Intelligence",
+      description:
+        "Leverage AI-driven insights and analytics to make proactive decisions, automate workflows, and optimize governance processes.",
+    },
+  ];
+
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-r from-indigo-900 via-black to-purple-900 text-white">
-      <h1 className="text-5xl md:text-6xl font-bold mb-6">
+    <section
+      className="min-h-screen flex flex-col justify-center items-center text-center px-6 animate-pastelMove bg-[length:200%_200%]"
+      style={{
+        backgroundImage: "linear-gradient(270deg, #fbcfe8, #bfdbfe, #e9d5ff)",
+      }}
+    >
+      <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
         Our Vision & Innovation
       </h1>
 
-      <p className="max-w-3xl text-gray-300 text-lg leading-relaxed">
+      <p className="max-w-3xl text-lg leading-relaxed text-gray-900">
         We are building a powerful enterprise-grade platform designed to
         transform governance, risk, and compliance operations through
         intelligent automation, scalable architecture, and modern infrastructure
@@ -13,15 +36,19 @@ const Explore = () => {
       </p>
 
       <div className="mt-10 grid md:grid-cols-3 gap-8">
-        {["Scalability", "Security", "Intelligence"].map((item, index) => (
+        {features.map((feature, index) => (
           <div
             key={index}
-            className="p-6 bg-gray-800 rounded-xl hover:scale-105 transition duration-300"
+            className="p-6 rounded-xl hover:scale-105 transition duration-300 shadow-xl"
+            style={{
+              background: "rgba(255, 255, 255, 0.6)", // soft frosted glass
+              backdropFilter: "blur(10px)",
+            }}
           >
-            <h3 className="text-xl font-semibold mb-2">{item}</h3>
-            <p className="text-gray-400">
-              Designed for modern enterprise ecosystems.
-            </p>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">
+              {feature.title}
+            </h3>
+            <p className="text-gray-700">{feature.description}</p>
           </div>
         ))}
       </div>
