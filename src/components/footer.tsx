@@ -11,21 +11,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* 3 Column Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-12 lg:gap-24">
-          <div className="flex flex-col gap-4">
-            <h4 className="text-xs font-semibold text-white uppercase tracking-widest mb-2">Product</h4>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Features</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Integrations</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Pricing</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Changelog</a>
-          </div>
-          
+        <div className="grid grid-cols-2 gap-12 lg:gap-24">
           <div className="flex flex-col gap-4">
             <h4 className="text-xs font-semibold text-white uppercase tracking-widest mb-2">Company</h4>
             <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">About Us</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Careers</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Blog</a>
             <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Contact</a>
           </div>
 
@@ -38,14 +27,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto pt-8 border-t border-[#161616] flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto pt-8 border-t border-[#161616] flex items-center justify-center">
         <p className="text-sm text-gray-600">
           © {new Date().getFullYear()} Shiriix. All rights reserved.
         </p>
-        <div className="flex items-center gap-6">
-          <a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Privacy</a>
-          <a href="#" className="text-sm text-gray-600 hover:text-white transition-colors">Terms</a>
-        </div>
       </div>
     </footer>
   );
