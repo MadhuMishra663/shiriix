@@ -124,7 +124,7 @@ const GrcDashboardMockup = () => {
       <div className="flex items-center justify-between mb-8 pb-4 border-b border-dark-600">
         <div className="flex items-center gap-3">
           <div className="w-2.5 h-2.5 rounded-full bg-accent-cyan" />
-          <span className="text-white font-medium">Risk Dashboard</span>
+          <span className="text-white font-medium">Early Access Insights</span>
         </div>
         <div className="border border-green-500/20 bg-green-500/10 text-green-400 text-xs font-semibold px-3 py-1 rounded-full">
           ✓ Passed

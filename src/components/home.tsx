@@ -61,10 +61,10 @@ const Testimonials = () => {
           {/* Card 1 */}
           <motion.div variants={itemVariants} className="h-[380px] bg-[#E8E8F0] text-[#0A0A0A] rounded-2xl p-10 flex flex-col justify-between shadow-xl">
             <h3 className="text-3xl md:text-[36px] font-bold leading-tight tracking-tight mt-4">
-              "Building something simple,useful, and honest -- glad you're here early"
+              "Building something simple,useful, and honest, glad you're here early"
             </h3>
             <div className="text-sm font-semibold tracking-wide uppercase mt-8 text-black/70">
-              Madhu , Founder At Shiriix
+              Madhu Mishra , CEO At Shiriix - Full Stack Developer
             </div>
           </motion.div>
 
@@ -74,7 +74,7 @@ const Testimonials = () => {
               "A Simple Platform To Make Your Buisness Grow."
             </h3>
             <div className="text-sm font-semibold tracking-wide uppercase mt-8 text-black/70">
-              Anand Prakash Mishra, Co-Founder At Shiriix
+              Anand Prakash Mishra, Director - Information Security At Governance
             </div>
           </motion.div>
         </div>
