@@ -31,9 +31,8 @@ const Footer = () => {
 
           <div className="flex flex-col gap-4">
             <h4 className="text-xs font-semibold text-white uppercase tracking-widest mb-2">Connect</h4>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/company/shiriix/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://github.com/MadhuMishra663/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-white transition-colors">GitHub</a>
           </div>
         </div>
       </div>
