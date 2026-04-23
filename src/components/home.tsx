@@ -11,7 +11,7 @@ import Footer from "./footer";
 import SEO from "./SEO";
 
 const MarqueeLogos = () => {
-  const logos = ["Nexlify", "Buildora", "Stackwise", "Venturix", "Complix", "Auditly"];
+  const logos = ["Fast Setup", "Early Access Open", "Built For Developers", "Secure & Simple", "Designed For Productivity", "Launch Ready"];
   // Double array for infinite scroll
   const scrollItems = [...logos, ...logos, ...logos, ...logos];
 
@@ -61,20 +61,20 @@ const Testimonials = () => {
           {/* Card 1 */}
           <motion.div variants={itemVariants} className="h-[380px] bg-[#E8E8F0] text-[#0A0A0A] rounded-2xl p-10 flex flex-col justify-between shadow-xl">
             <h3 className="text-3xl md:text-[36px] font-bold leading-tight tracking-tight mt-4">
-              "Shiriix transformed our compliance workflow overnight."
+              "Building something simple,useful, and honest -- glad you're here early"
             </h3>
             <div className="text-sm font-semibold tracking-wide uppercase mt-8 text-black/70">
-              Rohan M., CTO at Nexlify
+              Madhu , Founder At Shiriix
             </div>
           </motion.div>
 
           {/* Card 2 */}
           <motion.div variants={itemVariants} className="h-[380px] bg-[#CCFF00] text-[#0A0A0A] rounded-2xl p-10 flex flex-col justify-between shadow-xl">
             <h3 className="text-3xl md:text-[36px] font-bold leading-tight tracking-tight mt-4">
-              "Their AI tools cut our audit prep time by 70%."
+              "A Simple Platform To Make Your Buisness Grow."
             </h3>
             <div className="text-sm font-semibold tracking-wide uppercase mt-8 text-black/70">
-              Priya S., Founder at Buildora
+              Anand Prakash Mishra, Co-Founder At Shiriix
             </div>
           </motion.div>
         </div>
@@ -106,7 +106,7 @@ const ClosingCTA = () => {
         animate={isInView ? "visible" : "hidden"}
         className="max-w-4xl mx-auto flex flex-col items-center"
       >
-        <motion.h2 
+        <motion.h2
           variants={itemVariants}
           className="text-5xl md:text-[80px] font-extrabold text-white leading-tight tracking-tight mb-12"
         >
@@ -138,7 +138,7 @@ const ClosingCTA = () => {
 const Home = () => {
   return (
     <div className="min-h-screen bg-[#0A0A0A] selection:bg-accent-purple/30 selection:text-white">
-      <SEO 
+      <SEO
         title="Shiriix | AI-Powered Tools for Ambitious Startups"
         description="Shiriix helps you scale, automate, and stay compliant with enterprise-grade GRC tools and intelligent AI automation built for startups."
         keywords="ai automation, compliance, grc startup, risk management software"

@@ -46,7 +46,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav 
+    <nav
       className={`fixed w-full z-50 transition-all duration-300 
         backdrop-blur-xl bg-black/60 
         ${scrolled ? "border-b border-dark-600" : "border-b border-transparent"}`}
@@ -92,19 +92,16 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             <span
-              className={`w-5 h-0.5 bg-white transition-all duration-300 ${
-                menuOpen ? "rotate-45 translate-y-2" : ""
-              }`}
+              className={`w-5 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
             />
             <span
-              className={`w-5 h-0.5 bg-white transition-all duration-300 ${
-                menuOpen ? "opacity-0" : ""
-              }`}
+              className={`w-5 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""
+                }`}
             />
             <span
-              className={`w-5 h-0.5 bg-white transition-all duration-300 ${
-                menuOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
+              className={`w-5 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
             />
           </button>
         </div>
@@ -112,9 +109,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 bg-dark-900 border-b border-dark-600 ${
-          menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0 border-transparent"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 bg-dark-900 border-b border-dark-600 ${menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0 border-transparent"
+          }`}
       >
         <div className="flex flex-col items-center py-6 space-y-5">
           {navLinks.map((link) => (

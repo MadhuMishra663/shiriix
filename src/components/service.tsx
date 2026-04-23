@@ -16,7 +16,7 @@ const AnimatedTerminal = () => {
 
   useEffect(() => {
     if (!isInView) return;
-    
+
     let currentLine = 0;
     let currentChar = 0;
     let timeoutId: ReturnType<typeof setTimeout>;
@@ -25,7 +25,7 @@ const AnimatedTerminal = () => {
       if (currentLine >= fullLines.length) return;
 
       const lineText = fullLines[currentLine];
-      
+
       setLines(prev => {
         const newLines = [...prev];
         if (newLines[currentLine] === undefined) {
@@ -59,11 +59,11 @@ const AnimatedTerminal = () => {
         <div className="w-3 h-3 rounded-full bg-white" />
         <div className="w-3 h-3 rounded-full bg-white" />
       </div>
-      
+
       <div className="text-gray-400 mb-2">
         <span className="text-green-500 font-medium">~/shiriix</span> $ shiriix analyze --startup acme-corp
       </div>
-      
+
       <div className="flex flex-col gap-1 text-gray-300">
         {lines.map((line, i) => (
           <div key={i}>{line}</div>
@@ -81,18 +81,18 @@ const WorkflowDiagram = () => {
     <div className="relative w-full h-[300px] flex items-center justify-between px-4 md:px-10">
       {/* Dashed background lines */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
-        <path 
-          d="M 150 150 L 50% 150 L calc(100% - 150px) 150" 
-          fill="none" 
-          stroke="#1F1F1F" 
-          strokeWidth="2" 
+        <path
+          d="M 150 150 L 50% 150 L calc(100% - 150px) 150"
+          fill="none"
+          stroke="#1F1F1F"
+          strokeWidth="2"
           strokeDasharray="6 6"
         />
-        <path 
-          d="M 150 150 L 50% 150 L calc(100% - 150px) 150" 
-          fill="none" 
-          stroke="#7C3AED" 
-          strokeWidth="2" 
+        <path
+          d="M 150 150 L 50% 150 L calc(100% - 150px) 150"
+          fill="none"
+          stroke="#7C3AED"
+          strokeWidth="2"
           className="flow-path opacity-50"
         />
       </svg>
@@ -102,14 +102,14 @@ const WorkflowDiagram = () => {
         <div className="text-accent-purple font-mono text-xs">01</div>
         <div className="text-sm font-medium text-white">Input Data</div>
       </div>
-      
+
       <div className="relative z-10 w-32 h-32 bg-[#0A0A0A] border border-accent-purple/30 glow-purple rounded-full flex flex-col items-center justify-center gap-2 shadow-2xl">
         <div className="w-8 h-8 rounded-full border border-accent-purple animate-pulse flex items-center justify-center">
           <div className="w-2 h-2 rounded-full bg-accent-purple" />
         </div>
         <div className="text-sm font-bold text-white">AI Engine</div>
       </div>
-      
+
       <div className="relative z-10 w-28 h-28 bg-[#111] border border-dark-600 rounded-2xl flex flex-col items-center justify-center gap-2 shadow-xl">
         <div className="text-accent-cyan font-mono text-xs">03</div>
         <div className="text-sm font-medium text-white">Output</div>
@@ -130,45 +130,45 @@ const GrcDashboardMockup = () => {
           ✓ Passed
         </div>
       </div>
-      
+
       <div className="space-y-6">
         <div>
           <div className="flex justify-between text-xs text-gray-400 font-medium mb-2 uppercase tracking-wide">
-            <span>Compliance Score</span>
-            <span className="text-accent-cyan">94%</span>
+            <span>Feature Development</span>
+            <span className="text-accent-cyan">70%</span>
           </div>
           <div className="w-full h-1.5 bg-dark-700 rounded-full overflow-hidden">
-            <div className="h-full bg-accent-cyan rounded-full" style={{ width: "94%" }} />
+            <div className="h-full bg-accent-cyan rounded-full" style={{ width: "70%" }} />
           </div>
         </div>
         <div>
           <div className="flex justify-between text-xs text-gray-400 font-medium mb-2 uppercase tracking-wide">
-            <span>Risk Mitigation</span>
-            <span className="text-accent-purple">87%</span>
+            <span>UI/UX Completion</span>
+            <span className="text-accent-purple">80%</span>
           </div>
           <div className="w-full h-1.5 bg-dark-700 rounded-full overflow-hidden">
-            <div className="h-full bg-accent-purple rounded-full" style={{ width: "87%" }} />
+            <div className="h-full bg-accent-purple rounded-full" style={{ width: "80%" }} />
           </div>
         </div>
         <div>
           <div className="flex justify-between text-xs text-gray-400 font-medium mb-2 uppercase tracking-wide">
-            <span>Policy Coverage</span>
-            <span className="text-blue-500">91%</span>
+            <span>Beta Readiness</span>
+            <span className="text-blue-500">60%</span>
           </div>
           <div className="w-full h-1.5 bg-dark-700 rounded-full overflow-hidden">
-            <div className="h-full bg-blue-500 rounded-full" style={{ width: "91%" }} />
+            <div className="h-full bg-blue-500 rounded-full" style={{ width: "60%" }} />
           </div>
         </div>
       </div>
-      
+
       <div className="mt-8 grid grid-cols-2 gap-4">
         <div className="bg-dark-800 border border-dark-600 rounded-lg p-4">
-          <div className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold mb-1">Active Policies</div>
-          <div className="text-2xl font-bold text-white">24</div>
+          <div className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold mb-1">Targeted Users</div>
+          <div className="text-2xl font-bold text-white">100</div>
         </div>
         <div className="bg-dark-800 border border-dark-600 rounded-lg p-4">
-          <div className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold mb-1">Open Risks</div>
-          <div className="text-2xl font-bold text-accent-cyan">3</div>
+          <div className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold mb-1">Modules Created</div>
+          <div className="text-2xl font-bold text-accent-cyan">6</div>
         </div>
       </div>
     </div>
@@ -226,7 +226,7 @@ const Services = () => {
               Scale faster with intelligent automation.
             </h3>
             <p className="text-lg text-gray-400 leading-relaxed max-w-lg">
-              Smart analytics and automation to accelerate your startup's growth 
+              Smart analytics and automation to accelerate your startup's growth
               trajectory. Data-driven decisions, faster.
             </p>
           </motion.div>
@@ -250,7 +250,7 @@ const Services = () => {
               Automate repetitive workflows seamlessly.
             </h3>
             <p className="text-lg text-gray-400 leading-relaxed max-w-lg">
-              Streamline operations and free your team to focus on what matters most. 
+              Streamline operations and free your team to focus on what matters most.
               Our AI engine handles the heavy lifting instantly.
             </p>
           </motion.div>

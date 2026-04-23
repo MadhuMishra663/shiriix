@@ -19,7 +19,7 @@ const AnimatedCounter = ({ target, suffix = "", label, accentClass }: CounterPro
     let start = 0;
     const duration = 1500; // 1.5s
     const increment = target / (duration / 16);
-    
+
     const timer = setInterval(() => {
       start += increment;
       if (start >= target) {
@@ -83,8 +83,8 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
           {/* Left Column — Stats */}
           <motion.div variants={itemVariants} className="flex flex-col gap-12">
-            <AnimatedCounter target={50} suffix="+" label="Startups Helped" accentClass="text-accent-purple" />
-            <AnimatedCounter target={3} suffix="" label="AI Products" accentClass="text-accent-cyan" />
+            <AnimatedCounter target={500} suffix="+" label="Lines Of Code" accentClass="text-accent-purple" />
+            <AnimatedCounter target={20} suffix="+" label="Features planned for launch" accentClass="text-accent-cyan" />
             <AnimatedCounter target={100} suffix="%" label="GRC Ready" accentClass="text-white" />
           </motion.div>
 
@@ -101,7 +101,7 @@ const About = () => {
                 building, while we handle the complexity.
               </p>
               <p>
-                With pure focus on speed, intelligence, and beautiful design, we 
+                With pure focus on speed, intelligence, and beautiful design, we
                 craft software that accelerates your growth trajectory seamlessly.
               </p>
             </div>
