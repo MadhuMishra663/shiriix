@@ -1,0 +1,7 @@
+# Shiriix - Governance, Risk & Compliance Platform
+# https://shiriix.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://shiriix.com/sitemap.xml
